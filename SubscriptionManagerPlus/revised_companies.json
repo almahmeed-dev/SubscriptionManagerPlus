@@ -1,0 +1,758 @@
+[
+    {
+        "name":"Netflix",
+        "websiteURL":"https:\/\/www.netflix.com",
+        "hexColor":"#E50914",
+        "description":"Netflix is a streaming platform for movies and TV shows.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/help.netflix.com\/en\/node\/407",
+        "logoURL":"https:\/\/assets.brand.netflix.com\/assets\/Netflix_Logo.png"
+    },
+    {
+        "name":"Spotify",
+        "websiteURL":"https:\/\/www.spotify.com",
+        "hexColor":"#1DB954",
+        "description":"Spotify is a music streaming service.",
+        "category":"Music",
+        "cancellationGuideURL":"https:\/\/support.spotify.com\/us\/article\/cancel-premium\/",
+        "logoURL":"https:\/\/www.spotify.com\/static-files\/logo.png"
+    },
+    {
+        "name":"Amazon Prime",
+        "websiteURL":"https:\/\/www.amazon.com\/prime",
+        "hexColor":"#FF9900",
+        "description":"Amazon Prime offers streaming and shopping benefits.",
+        "category":"Streaming, Shopping",
+        "cancellationGuideURL":"https:\/\/www.amazon.com\/gp\/help\/customer\/display.html?nodeId=201118010",
+        "logoURL":"https:\/\/press.aboutamazon.com\/sites\/g\/files\/knoqqb37121\/themes\/site\/nir_pid201\/images\/logo-amazon.png"
+    },
+    {
+        "name":"Hulu",
+        "websiteURL":"https:\/\/www.hulu.com",
+        "hexColor":"#3DBB3D",
+        "description":"Hulu is a streaming service for TV shows and movies.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/help.hulu.com\/s\/article\/how-do-i-cancel-hulu",
+        "logoURL":"https:\/\/press.hulu.com\/wp-content\/uploads\/2020\/02\/hulu-white.png"
+    },
+    {
+        "name":"Disney+",
+        "websiteURL":"https:\/\/www.disneyplus.com",
+        "hexColor":"#113CCF",
+        "description":"Disney+ is a streaming service for Disney content.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/help.disneyplus.com\/csp?id=csp_article_content&sys_kb_id=",
+        "logoURL":"https:\/\/thewaltdisneycompany.com\/app\/uploads\/2020\/02\/DisneyPlusLogo.jpg"
+    },
+    {
+        "name":"HBO Max",
+        "websiteURL":"https:\/\/www.hbomax.com",
+        "hexColor":"#5B2C6F",
+        "description":"HBO Max offers streaming of HBO and more.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/help.hbomax.com\/us\/Answer\/Detail\/2056",
+        "logoURL":"https:\/\/pressroom.warnermedia.com\/sites\/default\/files\/hbomax_logo.png"
+    },
+    {
+        "name":"Apple Music",
+        "websiteURL":"https:\/\/www.apple.com\/apple-music",
+        "hexColor":"#FA243C",
+        "description":"Apple Music is a music streaming service by Apple.",
+        "category":"Music",
+        "cancellationGuideURL":"https:\/\/support.apple.com\/en-us\/HT202039",
+        "logoURL":"https:\/\/www.apple.com\/ac\/structured-data\/images\/knowledge_graph_logo.png"
+    },
+    {
+        "name":"Adobe Creative Cloud",
+        "websiteURL":"https:\/\/www.adobe.com\/creativecloud",
+        "hexColor":"#FF0000",
+        "description":"Access to Adobe's suite of creative apps.",
+        "category":"Software",
+        "cancellationGuideURL":"https:\/\/helpx.adobe.com\/manage-account\/using\/cancel-subscription.html",
+        "logoURL":"https:\/\/www.adobe.com\/content\/dam\/cc\/icons\/creative-cloud.svg"
+    },
+    {
+        "name":"Microsoft 365",
+        "websiteURL":"https:\/\/www.microsoft.com\/microsoft-365",
+        "hexColor":"#F25022",
+        "description":"Microsoft 365 offers Office apps and cloud services.",
+        "category":"Software",
+        "cancellationGuideURL":"https:\/\/support.microsoft.com\/en-us\/account-billing\/cancel-a-microsoft-subscription-b1bc0ad7-6b95-4a13-91b4-3c900d6e0d5b",
+        "logoURL":"https:\/\/c.s-microsoft.com\/en-us\/CMSImages\/Microsoft_logo.png"
+    },
+    {
+        "name":"Dropbox",
+        "websiteURL":"https:\/\/www.dropbox.com",
+        "hexColor":"#0061FF",
+        "description":"Dropbox is a file hosting and sharing service.",
+        "category":"Cloud Storage",
+        "cancellationGuideURL":"https:\/\/help.dropbox.com\/account\/cancel-subscription",
+        "logoURL":"https:\/\/cfl.dropboxstatic.com\/static\/images\/logo_catalog\/dropbox_logo_glyph_2015.svg"
+    },
+    {
+        "name":"Evernote",
+        "websiteURL":"https:\/\/www.evernote.com",
+        "hexColor":"#00A82D",
+        "description":"Evernote is a note-taking and organization app.",
+        "category":"Productivity",
+        "cancellationGuideURL":"https:\/\/help.evernote.com\/hc\/en-us\/articles\/209005287",
+        "logoURL":"https:\/\/evernote.com\/c\/assets\/homepage\/logo.png"
+    },
+    {
+        "name":"Grammarly",
+        "websiteURL":"https:\/\/www.grammarly.com",
+        "hexColor":"#15C39A",
+        "description":"Grammarly is a writing assistant for grammar and style.",
+        "category":"Writing Tool",
+        "cancellationGuideURL":"https:\/\/support.grammarly.com\/hc\/en-us\/articles\/115000090332",
+        "logoURL":"https:\/\/static.grammarly.com\/files\/images\/logos\/grammarly_logo.png"
+    },
+    {
+        "name":"Headspace",
+        "websiteURL":"https:\/\/www.headspace.com",
+        "hexColor":"#FF8000",
+        "description":"Headspace is a meditation and mindfulness app.",
+        "category":"Wellness",
+        "cancellationGuideURL":"https:\/\/help.headspace.com\/hc\/en-us\/articles\/360008651354",
+        "logoURL":"https:\/\/www.headspace.com\/images\/logo.png"
+    },
+    {
+        "name":"Calm",
+        "websiteURL":"https:\/\/www.calm.com",
+        "hexColor":"#2D68F0",
+        "description":"Calm is a meditation and sleep app.",
+        "category":"Wellness",
+        "cancellationGuideURL":"https:\/\/support.calm.com\/hc\/en-us\/articles\/360022953774",
+        "logoURL":"https:\/\/www.calm.com\/static\/calm-logo.png"
+    },
+    {
+        "name":"Peloton",
+        "websiteURL":"https:\/\/www.onepeloton.com",
+        "hexColor":"#000000",
+        "description":"Peloton offers live and on-demand fitness classes.",
+        "category":"Fitness",
+        "cancellationGuideURL":"https:\/\/support.onepeloton.com\/hc\/en-us\/articles\/360041038912",
+        "logoURL":"https:\/\/www.onepeloton.com\/logo.png"
+    },
+    {
+        "name":"Zoom",
+        "websiteURL":"https:\/\/www.zoom.us",
+        "hexColor":"#2D8CFF",
+        "description":"Zoom is a video conferencing tool.",
+        "category":"Communication",
+        "cancellationGuideURL":"https:\/\/support.zoom.us\/hc\/en-us\/articles\/201867273",
+        "logoURL":"https:\/\/st2.zoom.us\/static\/6.1.12600\/image\/new\/ZoomLogo.png"
+    },
+    {
+        "name":"Slack",
+        "websiteURL":"https:\/\/www.slack.com",
+        "hexColor":"#4A154B",
+        "description":"Slack is a team collaboration and messaging platform.",
+        "category":"Communication",
+        "cancellationGuideURL":"https:\/\/slack.com\/help\/articles\/201259356",
+        "logoURL":"https:\/\/a.slack-edge.com\/80588\/marketing\/img\/icons\/icon_slack_hash_colored.png"
+    },
+    {
+        "name":"Google Workspace",
+        "websiteURL":"https:\/\/workspace.google.com",
+        "hexColor":"#4285F4",
+        "description":"Google Workspace offers cloud productivity tools.",
+        "category":"Software",
+        "cancellationGuideURL":"https:\/\/support.google.com\/a\/answer\/1257646",
+        "logoURL":"https:\/\/www.google.com\/workspace\/images\/google-workspace-logo.svg"
+    },
+    {
+        "name":"LinkedIn Premium",
+        "websiteURL":"https:\/\/www.linkedin.com\/premium",
+        "hexColor":"#0077B5",
+        "description":"LinkedIn Premium provides enhanced networking features.",
+        "category":"Professional Networking",
+        "cancellationGuideURL":"https:\/\/www.linkedin.com\/help\/linkedin\/answer\/63",
+        "logoURL":"https:\/\/static.licdn.com\/sc\/h\/55e8ffef6f0e7eeb92c4a9a0e9e4960e-linkedin_full_logo.svg"
+    },
+    {
+        "name":"The New York Times",
+        "websiteURL":"https:\/\/www.nytimes.com\/subscription",
+        "hexColor":"#000000",
+        "description":"The New York Times is a leading news publication.",
+        "category":"News",
+        "cancellationGuideURL":"https:\/\/help.nytimes.com\/hc\/en-us\/articles\/360003499613",
+        "logoURL":"https:\/\/developer.nytimes.com\/files\/poweredby_nytimes_200c.png"
+    },
+    {
+        "name":"The Washington Post",
+        "websiteURL":"https:\/\/www.washingtonpost.com\/subscribe",
+        "hexColor":"#231F20",
+        "description":"The Washington Post is a major American daily newspaper.",
+        "category":"News",
+        "cancellationGuideURL":"https:\/\/subscribe.washingtonpost.com\/profile\/#\/cancel-subscription",
+        "logoURL":"https:\/\/www.washingtonpost.com\/pb\/resources\/img\/thewashingtonpost-white-512x512.png"
+    },
+    {
+        "name":"The Wall Street Journal",
+        "websiteURL":"https:\/\/www.wsj.com\/subscribe",
+        "hexColor":"#003366",
+        "description":"The Wall Street Journal focuses on business and economic news.",
+        "category":"News",
+        "cancellationGuideURL":"https:\/\/customercenter.wsj.com\/contact",
+        "logoURL":"https:\/\/s.wsj.net\/img\/meta\/wsj-social-share.png"
+    },
+    {
+        "name":"Audible",
+        "websiteURL":"https:\/\/www.audible.com",
+        "hexColor":"#F8991C",
+        "description":"Audible offers audiobooks and original audio content.",
+        "category":"Books",
+        "cancellationGuideURL":"https:\/\/www.audible.com\/how-to-cancel-audible-membership",
+        "logoURL":"https:\/\/audible-external-uk.imgix.net\/logos\/primary-logo.svg"
+    },
+    {
+        "name":"Kindle Unlimited",
+        "websiteURL":"https:\/\/www.amazon.com\/kindleunlimited",
+        "hexColor":"#FF9900",
+        "description":"Kindle Unlimited provides access to a vast library of ebooks.",
+        "category":"Books",
+        "cancellationGuideURL":"https:\/\/www.amazon.com\/gp\/help\/customer\/display.html?nodeId=201550820",
+        "logoURL":"https:\/\/m.media-amazon.com\/images\/G\/01\/kindle\/dp\/2019\/Logo\/Kindle_logo_LP.svg"
+    },
+    {
+        "name":"YouTube Premium",
+        "websiteURL":"https:\/\/www.youtube.com\/premium",
+        "hexColor":"#FF0000",
+        "description":"YouTube Premium offers ad-free videos and music streaming.",
+        "category":"Streaming, Music",
+        "cancellationGuideURL":"https:\/\/support.google.com\/youtube\/answer\/9657438",
+        "logoURL":"https:\/\/www.youtube.com\/about\/static\/svgs\/icons\/brand-resources\/YouTube-logo-full_color.svg"
+    },
+    {
+        "name":"PlayStation Plus",
+        "websiteURL":"https:\/\/www.playstation.com\/ps-plus",
+        "hexColor":"#003087",
+        "description":"PlayStation Plus offers online gaming and free monthly games.",
+        "category":"Gaming",
+        "cancellationGuideURL":"https:\/\/www.playstation.com\/en-us\/support\/subscriptions\/cancel-ps-plus-subscription",
+        "logoURL":"https:\/\/www.playstation.com\/etc.clientlibs\/global_pdc\/clientlibs\/clientlib-base\/img\/logos\/playstation_logo.svg"
+    },
+    {
+        "name":"Xbox Game Pass",
+        "websiteURL":"https:\/\/www.xbox.com\/game-pass",
+        "hexColor":"#107C10",
+        "description":"Xbox Game Pass provides access to a library of games.",
+        "category":"Gaming",
+        "cancellationGuideURL":"https:\/\/support.xbox.com\/en-US\/help\/subscriptions-billing\/manage-subscriptions\/cancel-recurring-billing-or-subscription",
+        "logoURL":"https:\/\/compass-ssl.microsoft.com\/assets\/50\/9a\/509adbf4-ec3f-4f35-b1c1-5b5f59158c34.svg?n=xbox-logo-35x35.svg"
+    },
+    {
+        "name":"Nintendo Switch Online",
+        "websiteURL":"https:\/\/www.nintendo.com\/switch\/online-service",
+        "hexColor":"#E60012",
+        "description":"Nintendo's online gaming subscription service.",
+        "category":"Gaming",
+        "cancellationGuideURL":"https:\/\/en-americas-support.nintendo.com\/app\/answers\/detail\/a_id\/27394",
+        "logoURL":"https:\/\/www.nintendo.com\/etc.clientlibs\/nintendo_www\/clientlibs\/global\/resources\/img\/logo.svg"
+    },
+    {
+        "name":"Skillshare",
+        "websiteURL":"https:\/\/www.skillshare.com",
+        "hexColor":"#F26B21",
+        "description":"Skillshare offers online learning courses.",
+        "category":"Education",
+        "cancellationGuideURL":"https:\/\/help.skillshare.com\/hc\/en-us\/articles\/204164095",
+        "logoURL":"https:\/\/static.skillshare.com\/assets\/images\/logo.png"
+    },
+    {
+        "name":"Coursera",
+        "websiteURL":"https:\/\/www.coursera.org",
+        "hexColor":"#2A73CC",
+        "description":"Coursera provides online courses from top universities.",
+        "category":"Education",
+        "cancellationGuideURL":"https:\/\/learner.coursera.help\/hc\/en-us\/articles\/208279756",
+        "logoURL":"https:\/\/d3njjcbhbojbot.cloudfront.net\/web\/images\/favicons\/apple-touch-icon-76x76.png"
+    },
+    {
+        "name":"Udemy",
+        "websiteURL":"https:\/\/www.udemy.com",
+        "hexColor":"#EC5252",
+        "description":"Udemy offers a wide range of online courses.",
+        "category":"Education",
+        "cancellationGuideURL":"https:\/\/support.udemy.com\/hc\/en-us\/articles\/229605008",
+        "logoURL":"https:\/\/www.udemy.com\/staticx\/udemy\/images\/v7\/logo-udemy.svg"
+    },
+    {
+        "name":"Duolingo Plus",
+        "websiteURL":"https:\/\/www.duolingo.com\/plus",
+        "hexColor":"#58CC02",
+        "description":"Duolingo Plus offers an ad-free language learning experience.",
+        "category":"Education",
+        "cancellationGuideURL":"https:\/\/support.duolingo.com\/hc\/en-us\/articles\/115002993091",
+        "logoURL":"https:\/\/d35aaqx5ub95lt.cloudfront.net\/images\/logo_duolingo.svg"
+    },
+    {
+        "name":"Canva Pro",
+        "websiteURL":"https:\/\/www.canva.com\/pro",
+        "hexColor":"#00C4CC",
+        "description":"Canva Pro offers advanced graphic design tools.",
+        "category":"Design",
+        "cancellationGuideURL":"https:\/\/www.canva.com\/help\/article\/cancel-canva-pro-subscription",
+        "logoURL":"https:\/\/static.canva.com\/static\/images\/canva-logo.svg"
+    },
+    {
+        "name":"Squarespace",
+        "websiteURL":"https:\/\/www.squarespace.com",
+        "hexColor":"#121212",
+        "description":"Squarespace provides website building and hosting services.",
+        "category":"Website Builder",
+        "cancellationGuideURL":"https:\/\/support.squarespace.com\/hc\/en-us\/articles\/205815928",
+        "logoURL":"https:\/\/www.squarespace.com\/apple-touch-icon.png"
+    },
+    {
+        "name":"Wix",
+        "websiteURL":"https:\/\/www.wix.com",
+        "hexColor":"#0C6EFC",
+        "description":"Wix is a cloud-based web development platform.",
+        "category":"Website Builder",
+        "cancellationGuideURL":"https:\/\/support.wix.com\/en\/article\/canceling-your-premium-plan",
+        "logoURL":"https:\/\/static.parastorage.com\/services\/santa-resources\/resources\/images\/logos\/logo_wix_color.svg"
+    },
+    {
+        "name":"Shopify",
+        "websiteURL":"https:\/\/www.shopify.com",
+        "hexColor":"#96BF48",
+        "description":"Shopify offers an ecommerce platform for online stores.",
+        "category":"Ecommerce",
+        "cancellationGuideURL":"https:\/\/help.shopify.com\/en\/manual\/your-account\/pause-close-store",
+        "logoURL":"https:\/\/cdn.shopify.com\/shopify-marketing_assets\/static\/shopify-full-color-black.svg"
+    },
+    {
+        "name":"QuickBooks",
+        "websiteURL":"https:\/\/quickbooks.intuit.com",
+        "hexColor":"#2CA01C",
+        "description":"QuickBooks provides accounting software for businesses.",
+        "category":"Finance",
+        "cancellationGuideURL":"https:\/\/quickbooks.intuit.com\/learn-support\/en-us\/manage-subscriptions-or-services\/cancel-your-quickbooks-online-subscription\/00\/201852",
+        "logoURL":"https:\/\/quickbooks.intuit.com\/content\/dam\/intuit\/quickbooks\/images\/QB-logo.png"
+    },
+    {
+        "name":"FreshBooks",
+        "websiteURL":"https:\/\/www.freshbooks.com",
+        "hexColor":"#0491F2",
+        "description":"FreshBooks offers cloud-based accounting software.",
+        "category":"Finance",
+        "cancellationGuideURL":"https:\/\/www.freshbooks.com\/support\/cancel-freshbooks-account",
+        "logoURL":"https:\/\/www.freshbooks.com\/themes\/freshbooks\/images\/press\/logo_freshbooks-blue.svg"
+    },
+    {
+        "name":"Salesforce",
+        "websiteURL":"https:\/\/www.salesforce.com",
+        "hexColor":"#1798C1",
+        "description":"Salesforce provides customer relationship management software.",
+        "category":"Software",
+        "cancellationGuideURL":"https:\/\/help.salesforce.com\/articleView?id=000329283&type=1&mode=1",
+        "logoURL":"https:\/\/www.salesforce.com\/etc\/clientlibs\/sfdc-www\/clientlibs\/main\/images\/logo.svg"
+    },
+    {
+        "name":"Asana",
+        "websiteURL":"https:\/\/www.asana.com",
+        "hexColor":"#273347",
+        "description":"Asana is a project management tool for teams.",
+        "category":"Productivity",
+        "cancellationGuideURL":"https:\/\/asana.com\/guide\/help\/premium\/billing#gl-cancel",
+        "logoURL":"https:\/\/asana.com\/assets\/img\/press\/logo.svg"
+    },
+    {
+        "name":"Trello",
+        "websiteURL":"https:\/\/www.trello.com",
+        "hexColor":"#0079BF",
+        "description":"Trello offers visual collaboration tools.",
+        "category":"Productivity",
+        "cancellationGuideURL":"https:\/\/help.trello.com\/article\/801-canceling-trello-gold-or-business-class",
+        "logoURL":"https:\/\/a.trellocdn.com\/prgb\/assets\/images\/taco-404-2x.a1d95d3c0c2a9c5c51d1.png"
+    },
+    {
+        "name":"Notion",
+        "websiteURL":"https:\/\/www.notion.so",
+        "hexColor":"#000000",
+        "description":"Notion is an all-in-one workspace for notes and tasks.",
+        "category":"Productivity",
+        "cancellationGuideURL":"https:\/\/www.notion.so\/Cancel-Plan-bbbab01d66db4366a38e9ae8c9b019b2",
+        "logoURL":"https:\/\/www.notion.so\/front-static\/meta\/default.png"
+    },
+    {
+        "name":"Todoist",
+        "websiteURL":"https:\/\/todoist.com",
+        "hexColor":"#E44332",
+        "description":"Todoist is a task management application.",
+        "category":"Productivity",
+        "cancellationGuideURL":"https:\/\/get.todoist.help\/hc\/en-us\/articles\/205248842",
+        "logoURL":"https:\/\/d3ptyyxy2at9ui.cloudfront.net\/logo_full_red.svg"
+    },
+    {
+        "name":"Box",
+        "websiteURL":"https:\/\/www.box.com",
+        "hexColor":"#0061D5",
+        "description":"Box is a cloud content management and file sharing service.",
+        "category":"Cloud Storage",
+        "cancellationGuideURL":"https:\/\/support.box.com\/hc\/en-us\/articles\/360043695094",
+        "logoURL":"https:\/\/cdn03.boxcdn.net\/platform\/branding\/logos\/box-logo.svg"
+    },
+    {
+        "name":"GitHub",
+        "websiteURL":"https:\/\/github.com",
+        "hexColor":"#24292E",
+        "description":"GitHub provides hosting for software development version control.",
+        "category":"Software Development",
+        "cancellationGuideURL":"https:\/\/docs.github.com\/en\/billing\/managing-billing-for-github-subscriptions-and-products\/canceling-a-personal-github-subscription",
+        "logoURL":"https:\/\/github.githubassets.com\/images\/modules\/logos_page\/GitHub-Mark.png"
+    },
+    {
+        "name":"GitLab",
+        "websiteURL":"https:\/\/about.gitlab.com",
+        "hexColor":"#FC6D26",
+        "description":"GitLab is a web-based DevOps lifecycle tool.",
+        "category":"Software Development",
+        "cancellationGuideURL":"https:\/\/about.gitlab.com\/pricing\/cancel\/",
+        "logoURL":"https:\/\/about.gitlab.com\/images\/press\/logo\/png\/gitlab-logo-gray-rgb.png"
+    },
+    {
+        "name":"Bitbucket",
+        "websiteURL":"https:\/\/bitbucket.org",
+        "hexColor":"#205081",
+        "description":"Bitbucket is a Git-based source code repository hosting service.",
+        "category":"Software Development",
+        "cancellationGuideURL":"https:\/\/support.atlassian.com\/bitbucket-cloud\/docs\/cancel-your-subscription",
+        "logoURL":"https:\/\/wac-cdn.atlassian.com\/assets\/img\/favicons\/bitbucket\/apple-touch-icon.png"
+    },
+    {
+        "name":"ProtonMail",
+        "websiteURL":"https:\/\/protonmail.com",
+        "hexColor":"#6D4AFF",
+        "description":"ProtonMail is a secure email service.",
+        "category":"Email",
+        "cancellationGuideURL":"https:\/\/protonmail.com\/support\/knowledge-base\/cancel-subscription",
+        "logoURL":"https:\/\/protonmail.com\/images\/logo.png"
+    },
+    {
+        "name":"NordVPN",
+        "websiteURL":"https:\/\/nordvpn.com",
+        "hexColor":"#006699",
+        "description":"NordVPN provides VPN services for secure internet browsing.",
+        "category":"VPN",
+        "cancellationGuideURL":"https:\/\/my.nordaccount.com\/dashboard\/subscriptions",
+        "logoURL":"https:\/\/nordvpn.com\/wp-content\/uploads\/2018\/04\/nordvpn-logo.png"
+    },
+    {
+        "name":"ExpressVPN",
+        "websiteURL":"https:\/\/www.expressvpn.com",
+        "hexColor":"#0D5BFF",
+        "description":"ExpressVPN offers VPN services for privacy and security.",
+        "category":"VPN",
+        "cancellationGuideURL":"https:\/\/www.expressvpn.com\/support\/account\/how-to-cancel-subscription",
+        "logoURL":"https:\/\/www.expressvpn.com\/images\/logo.png"
+    },
+    {
+        "name":"LastPass",
+        "websiteURL":"https:\/\/www.lastpass.com",
+        "hexColor":"#D32D27",
+        "description":"LastPass is a password manager that stores encrypted passwords.",
+        "category":"Security",
+        "cancellationGuideURL":"https:\/\/support.logmeininc.com\/lastpass\/help\/how-do-i-cancel-my-lastpass-premium-or-families-subscription-lp070004",
+        "logoURL":"https:\/\/static.lpmsp.io\/uploads\/sites\/8\/2019\/10\/lastpass-bug-rgb-3-1.svg"
+    },
+    {
+        "name":"1Password",
+        "websiteURL":"https:\/\/1password.com",
+        "hexColor":"#0094F5",
+        "description":"1Password is a password manager and secure wallet.",
+        "category":"Security",
+        "cancellationGuideURL":"https:\/\/support.1password.com\/cancel-subscription",
+        "logoURL":"https:\/\/1password.com\/img\/logo-v1.svg"
+    },
+    {
+        "name":"Tidal",
+        "websiteURL":"https:\/\/tidal.com",
+        "hexColor":"#000000",
+        "description":"Tidal is a music streaming service with high fidelity sound.",
+        "category":"Music",
+        "cancellationGuideURL":"https:\/\/support.tidal.com\/hc\/en-us\/articles\/201314751",
+        "logoURL":"https:\/\/tidal.com\/assets\/images\/tidal-logo.svg"
+    },
+    {
+        "name":"Deezer",
+        "websiteURL":"https:\/\/www.deezer.com",
+        "hexColor":"#FF0000",
+        "description":"Deezer is a music streaming service.",
+        "category":"Music",
+        "cancellationGuideURL":"https:\/\/support.deezer.com\/hc\/en-gb\/articles\/115003998409",
+        "logoURL":"https:\/\/cdns-images.dzcdn.net\/images\/common\/favicon\/favicon-32x32.png"
+    },
+    {
+        "name":"Pandora",
+        "websiteURL":"https:\/\/www.pandora.com",
+        "hexColor":"#005483",
+        "description":"Pandora offers personalized music streaming and radio.",
+        "category":"Music",
+        "cancellationGuideURL":"https:\/\/help.pandora.com\/s\/article\/How-to-Cancel-Your-Subscription",
+        "logoURL":"https:\/\/www.pandora.com\/img\/pandora-logo.png"
+    },
+    {
+        "name":"SiriusXM",
+        "websiteURL":"https:\/\/www.siriusxm.com",
+        "hexColor":"#0073CF",
+        "description":"SiriusXM provides satellite radio and online radio services.",
+        "category":"Music",
+        "cancellationGuideURL":"https:\/\/www.siriusxm.com\/cancel-siriusxm",
+        "logoURL":"https:\/\/www.siriusxm.com\/corporate\/logos\/siriusxm-logo.png"
+    },
+    {
+        "name":"Crunchyroll",
+        "websiteURL":"https:\/\/www.crunchyroll.com",
+        "hexColor":"#F47521",
+        "description":"Crunchyroll streams anime and manga content.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/help.crunchyroll.com\/hc\/en-us\/articles\/204537089",
+        "logoURL":"https:\/\/static.crunchyroll.com\/assets\/global_header_logo-89b170da96d0d53cd1aa63e5034d660e.png"
+    },
+    {
+        "name":"Funimation",
+        "websiteURL":"https:\/\/www.funimation.com",
+        "hexColor":"#F0123D",
+        "description":"Funimation offers anime streaming services.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/www.funimation.com\/account\/subscription",
+        "logoURL":"https:\/\/d33wubrfki0l68.cloudfront.net\/6f9e815528bf3bbd65f4f5833e8f249e2b84eeec\/ab5ab\/images\/logo.png"
+    },
+    {
+        "name":"FuboTV",
+        "websiteURL":"https:\/\/www.fubo.tv",
+        "hexColor":"#FF0000",
+        "description":"FuboTV is a streaming service focused on live sports.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/support.fubo.tv\/hc\/en-us\/articles\/360021527991",
+        "logoURL":"https:\/\/d229kpbsb5jevy.cloudfront.net\/app\/uploads\/2019\/09\/fuboTV_logo.png"
+    },
+    {
+        "name":"Sling TV",
+        "websiteURL":"https:\/\/www.sling.com",
+        "hexColor":"#EA6329",
+        "description":"Sling TV offers live TV streaming over the internet.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/help.sling.com\/en\/support\/solutions\/articles\/46000000052",
+        "logoURL":"https:\/\/www.sling.com\/track\/content\/images\/logos\/sling-logo-blue.svg"
+    },
+    {
+        "name":"YouTube TV",
+        "websiteURL":"https:\/\/tv.youtube.com",
+        "hexColor":"#FF0000",
+        "description":"YouTube TV offers live TV streaming.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/support.google.com\/youtubetv\/answer\/7028912",
+        "logoURL":"https:\/\/www.youtube.com\/about\/static\/svgs\/icons\/brand-resources\/YouTubeTV-logo-light.svg"
+    },
+    {
+        "name":"ESPN+",
+        "websiteURL":"https:\/\/plus.espn.com",
+        "hexColor":"#FF9E00",
+        "description":"ESPN+ offers live sports streaming and exclusive content.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/support.espn.com\/hc\/en-us\/articles\/360003834132",
+        "logoURL":"https:\/\/a.espncdn.com\/redesign\/assets\/img\/logos\/espnplus\/espnplus-logo.png"
+    },
+    {
+        "name":"DAZN",
+        "websiteURL":"https:\/\/www.dazn.com",
+        "hexColor":"#FF0000",
+        "description":"DAZN streams live and on-demand sports content.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/www.dazn.com\/help\/articles\/how-do-i-cancel-my-subscription",
+        "logoURL":"https:\/\/static.daznservices.com\/branding\/dazn-horizontal-logo.svg"
+    },
+    {
+        "name":"MLB.TV",
+        "websiteURL":"https:\/\/www.mlb.com\/tv",
+        "hexColor":"#003278",
+        "description":"MLB.TV offers live baseball game streaming.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/www.mlb.com\/live-stream-games\/help-center\/subscription-management",
+        "logoURL":"https:\/\/www.mlbstatic.com\/mlb.com\/builds\/site-core\/91db160aedae6fae2edec5658541f2ed5e87d1d2_1603903548\/images\/logos\/mlb-logo.svg"
+    },
+    {
+        "name":"NFL Game Pass",
+        "websiteURL":"https:\/\/www.nfl.com\/gamepass",
+        "hexColor":"#D50A0A",
+        "description":"NFL Game Pass provides access to NFL games on-demand.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/www.nfl.com\/help\/subscribe-and-billing",
+        "logoURL":"https:\/\/static.www.nfl.com\/static\/content\/public\/static\/img\/favicon.ico"
+    },
+    {
+        "name":"NBA League Pass",
+        "websiteURL":"https:\/\/www.nba.com\/leaguepass",
+        "hexColor":"#17408B",
+        "description":"NBA League Pass offers live and on-demand NBA games.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/support.watch.nba.com\/hc\/en-us\/articles\/115002267587",
+        "logoURL":"https:\/\/cdn.nba.com\/logos\/leagues\/logo-nba.svg"
+    },
+    {
+        "name":"NHL.TV",
+        "websiteURL":"https:\/\/www.nhl.com\/tv",
+        "hexColor":"#111111",
+        "description":"NHL.TV provides live and on-demand hockey games.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/www.nhl.com\/info\/nhltv-cancellation",
+        "logoURL":"https:\/\/www.nhl.com\/site-core\/images\/logos\/nhl\/svg\/nhl-header.svg"
+    },
+    {
+        "name":"Fitbit Premium",
+        "websiteURL":"https:\/\/www.fitbit.com\/premium",
+        "hexColor":"#00B0B9",
+        "description":"Fitbit Premium offers personalized health insights.",
+        "category":"Fitness",
+        "cancellationGuideURL":"https:\/\/help.fitbit.com\/articles\/en_US\/Help_article\/2430.htm",
+        "logoURL":"https:\/\/www.fitbit.com\/global\/content\/images\/logo_fitbit_nav.png"
+    },
+    {
+        "name":"MyFitnessPal Premium",
+        "websiteURL":"https:\/\/www.myfitnesspal.com\/premium",
+        "hexColor":"#00528C",
+        "description":"Advanced features for tracking diet and exercise.",
+        "category":"Fitness",
+        "cancellationGuideURL":"https:\/\/support.myfitnesspal.com\/hc\/en-us\/articles\/360032623932",
+        "logoURL":"https:\/\/static.myfitnesspal.com\/images\/logo.svg"
+    },
+    {
+        "name":"Strava",
+        "websiteURL":"https:\/\/www.strava.com\/subscribe",
+        "hexColor":"#FC4C02",
+        "description":"Strava offers tracking for running and cycling activities.",
+        "category":"Fitness",
+        "cancellationGuideURL":"https:\/\/support.strava.com\/hc\/en-us\/articles\/216942387",
+        "logoURL":"https:\/\/d3nn82uaxijpm6.cloudfront.net\/assets\/icons\/strava_logo.png"
+    },
+    {
+        "name":"Adobe Acrobat Pro DC",
+        "websiteURL":"https:\/\/acrobat.adobe.com\/us\/en\/acrobat\/pro.html",
+        "hexColor":"#FF0000",
+        "description":"PDF editing and creation software.",
+        "category":"Software",
+        "cancellationGuideURL":"https:\/\/helpx.adobe.com\/manage-account\/using\/cancel-subscription.html",
+        "logoURL":"https:\/\/www.adobe.com\/content\/dam\/shared\/images\/product-icons\/svg\/acrobat-reader.svg"
+    },
+    {
+        "name":"Norton Antivirus",
+        "websiteURL":"https:\/\/us.norton.com\/products",
+        "hexColor":"#231F20",
+        "description":"Norton provides antivirus and security software.",
+        "category":"Security",
+        "cancellationGuideURL":"https:\/\/support.norton.com\/sp\/en\/us\/home\/current\/solutions\/kb20080417160313EN_EndUserProfile_en_us",
+        "logoURL":"https:\/\/www.nortonlifelock.com\/content\/dam\/nortonlifelock\/images\/logos\/norton-logo.svg"
+    },
+    {
+        "name":"Blue Apron",
+        "websiteURL":"https:\/\/www.blueapron.com",
+        "hexColor":"#3C3C3C",
+        "description":"Blue Apron delivers meal kits with recipes and ingredients.",
+        "category":"Meal Kits",
+        "cancellationGuideURL":"https:\/\/support.blueapron.com\/hc\/en-us\/articles\/202949214",
+        "logoURL":"https:\/\/media.blueapron.com\/assets\/ba-logo.svg"
+    },
+    {
+        "name":"HelloFresh",
+        "websiteURL":"https:\/\/www.hellofresh.com",
+        "hexColor":"#99CC33",
+        "description":"HelloFresh provides meal kit delivery services.",
+        "category":"Meal Kits",
+        "cancellationGuideURL":"https:\/\/www.hellofresh.com\/faq\/account-management\/",
+        "logoURL":"https:\/\/cdn.hellofresh.com\/logo.png"
+    },
+    {
+        "name":"Stitch Fix",
+        "websiteURL":"https:\/\/www.stitchfix.com",
+        "hexColor":"#2F3E4D",
+        "description":"Stitch Fix offers personalized styling and clothing delivery.",
+        "category":"Fashion",
+        "cancellationGuideURL":"https:\/\/support.stitchfix.com\/hc\/en-us\/articles\/360034625834",
+        "logoURL":"https:\/\/www.stitchfix.com\/logo.png"
+    },
+    {
+        "name":"Dollar Shave Club",
+        "websiteURL":"https:\/\/www.dollarshaveclub.com",
+        "hexColor":"#4A90E2",
+        "description":"Subscription service for razors and grooming products.",
+        "category":"Personal Care",
+        "cancellationGuideURL":"https:\/\/help.dollarshaveclub.com\/hc\/en-us\/articles\/115002759106",
+        "logoURL":"https:\/\/www.dollarshaveclub.com\/images\/logo.svg"
+    },
+    {
+        "name":"BarkBox",
+        "websiteURL":"https:\/\/www.barkbox.com",
+        "hexColor":"#00B0FF",
+        "description":"Monthly subscription of dog products and toys.",
+        "category":"Pets",
+        "cancellationGuideURL":"https:\/\/faq.barkbox.com\/hc\/en-us\/articles\/200258574",
+        "logoURL":"https:\/\/www.barkbox.com\/logo.png"
+    },
+    {
+        "name":"Chewy",
+        "websiteURL":"https:\/\/www.chewy.com",
+        "hexColor":"#3300CC",
+        "description":"Online retailer of pet food and products.",
+        "category":"Pets",
+        "cancellationGuideURL":"https:\/\/www.chewy.com\/app\/content\/auto-ship",
+        "logoURL":"https:\/\/www.chewy.com\/assets\/images\/logo.svg"
+    },
+    {
+        "name":"Birchbox",
+        "websiteURL":"https:\/\/www.birchbox.com",
+        "hexColor":"#FF69B4",
+        "description":"Monthly subscription box for beauty samples.",
+        "category":"Beauty",
+        "cancellationGuideURL":"https:\/\/support.birchbox.com\/hc\/en-us\/articles\/200209754",
+        "logoURL":"https:\/\/www.birchbox.com\/logo.png"
+    },
+    {
+        "name":"FabFitFun",
+        "websiteURL":"https:\/\/fabfitfun.com",
+        "hexColor":"#000000",
+        "description":"Seasonal subscription box with beauty and wellness products.",
+        "category":"Beauty, Wellness",
+        "cancellationGuideURL":"https:\/\/help.fabfitfun.com\/hc\/en-us\/articles\/360034920394",
+        "logoURL":"https:\/\/fabfitfun.com\/logo.png"
+    },
+    {
+        "name":"Loot Crate",
+        "websiteURL":"https:\/\/www.lootcrate.com",
+        "hexColor":"#000000",
+        "description":"Subscription box for gamer and pop culture items.",
+        "category":"Collectibles",
+        "cancellationGuideURL":"https:\/\/help.lootcrate.com\/hc\/en-us\/articles\/200026449",
+        "logoURL":"https:\/\/www.lootcrate.com\/assets\/images\/logo.png"
+    },
+    {
+        "name":"EA Play",
+        "websiteURL":"https:\/\/www.ea.com\/ea-play",
+        "hexColor":"#000000",
+        "description":"Subscription for EA games access.",
+        "category":"Gaming",
+        "cancellationGuideURL":"https:\/\/help.ea.com\/en-us\/help\/account\/manage-origin-access-membership",
+        "logoURL":"https:\/\/eaassets-a.akamaihd.net\/origin-com-store-final-assets-prod\/423a7e77885a\/images\/ea-logo.svg"
+    },
+    {
+        "name":"Disney Movie Club",
+        "websiteURL":"https:\/\/disneymovieclub.go.com",
+        "hexColor":"#113CCF",
+        "description":"Subscription service for Disney movies.",
+        "category":"Movies",
+        "cancellationGuideURL":"https:\/\/disneymovieclub.go.com\/policies#membership",
+        "logoURL":"https:\/\/disneymovieclub.go.com\/images\/dmc-logo.png"
+    },
+    {
+        "name":"Shudder",
+        "websiteURL":"https:\/\/www.shudder.com",
+        "hexColor":"#D61F27",
+        "description":"Streaming service for horror movies and series.",
+        "category":"Streaming",
+        "cancellationGuideURL":"https:\/\/support.shudder.com\/hc\/en-us\/articles\/115004998434",
+        "logoURL":"https:\/\/s3.amazonaws.com\/shudder-static-assets\/img\/shudder-logo.svg"
+    }
+]
