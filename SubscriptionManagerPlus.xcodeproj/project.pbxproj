@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C1C0B87E2CEFE91F00BF106B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C1C0B87D2CEFE91F00BF106B /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C1C0B84D2CEBB22900BF106B /* SubscriptionManagerPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubscriptionManagerPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C0B87E2CEFE91F00BF106B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = SubscriptionManagerPlus;
 			packageProductDependencies = (
+				C1C0B87D2CEFE91F00BF106B /* Lottie */,
 			);
 			productName = SubscriptionManagerPlus;
 			productReference = C1C0B84D2CEBB22900BF106B /* SubscriptionManagerPlus.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = C1C0B8442CEBB22900BF106B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C1C0B87C2CEFE91F00BF106B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1C0B84E2CEBB22900BF106B /* Products */;
 			projectDirPath = "";
@@ -254,6 +263,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SubscriptionManagerPlus/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need access to your calendar to add subscription billing reminders.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,6 +292,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SubscriptionManagerPlus/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need access to your calendar to add subscription billing reminders.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1C0B87C2CEFE91F00BF106B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1C0B87D2CEFE91F00BF106B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1C0B87C2CEFE91F00BF106B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1C0B8452CEBB22900BF106B /* Project object */;
 }

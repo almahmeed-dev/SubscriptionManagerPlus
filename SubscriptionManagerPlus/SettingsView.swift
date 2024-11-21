@@ -8,53 +8,39 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("currency") private var selectedCurrency = "USD"
-    @Environment(\.colorScheme) private var colorScheme
-    @Environment(\.dismiss) private var dismiss
+    @AppStorage("globalNotificationsEnabled") private var globalNotificationsEnabled = true
+    @AppStorage("defaultBillingCycle") private var defaultBillingCycle = "Monthly"
 
-    private let currencies = ["USD", "EUR", "BHD", "SAR"]
+    private let billingCycles = ["Monthly", "Yearly"]
 
     var body: some View {
         NavigationStack {
             Form {
+                // Notification Settings
                 Section(header: Text("Notifications")) {
-                    Toggle("Enable Notifications", isOn: .constant(true))
-                        .disabled(true)
+                    Toggle("Enable Notifications", isOn: $globalNotificationsEnabled)
                 }
 
-                Section(header: Text("Currency Preferences")) {
-                                    Picker("Currency", selection: $selectedCurrency) {
-                                        ForEach(currencies, id: \.self) { currency in
-                                            Text(currency)
-                                        }
-                                    }
-                                }
-
-                                Section(header: Text("App Theme")) {
-                                    Text("Current Theme: \(colorScheme == .dark ? "Dark" : "Light")")
-                                }
-
-                                Section(header: Text("About")) {
-                                    Text("Subscription Manager Plus")
-                                        .font(.headline)
-                                    Text("Version 1.0")
-                                        .font(.subheadline)
-                                    Text("Designed to simplify managing subscriptions and reduce unnecessary costs.")
-                                        .font(.body)
-                                }
-                            }
-                            .navigationTitle("Settings")
-                            .toolbar {
-                                ToolbarItem(placement: .confirmationAction) {
-                                    Button("Done") {
-                                        dismiss()
-                                    }
-                                }
-                            }
+                // Default Values
+                Section(header: Text("Defaults")) {
+                    Picker("Default Billing Cycle", selection: $defaultBillingCycle) {
+                        ForEach(billingCycles, id: \.self) { cycle in
+                            Text(cycle)
                         }
                     }
                 }
 
-                #Preview {
-                    SettingsView()
+                // Links
+                Section(header: Text("App Info")) {
+                    Link("Privacy Policy", destination: URL(string: "https://www.example.com/privacy")!)
+                    Link("Support", destination: URL(string: "https://www.example.com/support")!)
                 }
+            }
+            .navigationTitle("Settings")
+        }
+    }
+}
+
+#Preview {
+    SettingsView()
+}

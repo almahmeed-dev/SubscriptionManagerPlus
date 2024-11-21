@@ -6,13 +6,10 @@
 //
 
 import SwiftUI
-import CoreData
 import EventKit
 
 struct SubscriptionDetailView: View {
     let subscription: Subscription
-    @State private var isEditing = false
-    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -29,91 +26,54 @@ struct SubscriptionDetailView: View {
             Text("Next Billing Date: \(subscription.nextBillingDate ?? Date(), style: .date)")
                 .font(.subheadline)
             
-            if let notes = subscription.notes, !notes.isEmpty {
-                Text("Notes:")
-                    .font(.headline)
-                Text(notes)
-                    .font(.body)
-            }
-            
             Spacer()
             
-            // Button alignment fix
-            VStack(spacing: 16) {
-                Button(action: {
-                    addToCalendar(subscription: subscription)
-                }) {
-                    Text("Add to Calendar")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue.opacity(0.2))
-                        .cornerRadius(8)
-                        .foregroundColor(.blue)
-                }
-                
-                NavigationLink(destination: CancellationGuideView()) {
-                    Text("How to Cancel")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue.opacity(0.2))
-                        .cornerRadius(8)
-                        .foregroundColor(.blue)
-                }
+            Button(action: { addToCalendar(subscription: subscription) }) {
+                Text("Add to Calendar")
+                    .foregroundColor(.blue)
             }
         }
         .padding()
         .navigationTitle("Details")
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button("Edit") {
-                    isEditing.toggle()
-                }
-            }
-        }
-        .sheet(isPresented: $isEditing) {
-            AddSubscriptionView(editingSubscription: subscription)
-        }
     }
     
     private func addToCalendar(subscription: Subscription) {
         let eventStore = EKEventStore()
-        guard let billingDate = subscription.nextBillingDate else { return }
         
+        // Ensure a valid next billing date exists
+        guard let billingDate = subscription.nextBillingDate else {
+            print("No billing date found for this subscription.")
+            return
+        }
+        
+        // Request full access to the calendar
         eventStore.requestFullAccessToEvents { granted, error in
+            if let error = error {
+                print("Error requesting calendar access: \(error.localizedDescription)")
+                return
+            }
+            
             if granted {
-                let event = EKEvent(eventStore: eventStore)
-                event.title = "\(subscription.serviceName ?? "Subscription") Billing Date"
-                event.startDate = billingDate
-                event.endDate = billingDate.addingTimeInterval(3600) // 1-hour duration
-                event.calendar = eventStore.defaultCalendarForNewEvents
-                // Add an alarm 1 day before the event
-                event.addAlarm(EKAlarm(relativeOffset: -86400)) // 1 day before (in seconds)
-                
-                do {
-                    try eventStore.save(event, span: .thisEvent)
-                    print("Event added to calendar")
-                } catch {
-                    print("Error saving event: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    let event = EKEvent(eventStore: eventStore)
+                    event.title = "\(subscription.serviceName ?? "Subscription") Billing Date"
+                    event.startDate = billingDate
+                    event.endDate = billingDate.addingTimeInterval(3600) // 1-hour event duration
+                    event.calendar = eventStore.defaultCalendarForNewEvents
+                    
+                    // Add an alarm 1 day before
+                    event.addAlarm(EKAlarm(relativeOffset: -86400)) // 1 day before
+                    
+                    do {
+                        try eventStore.save(event, span: .thisEvent)
+                        print("Event added to calendar successfully!")
+                    } catch {
+                        print("Error saving event: \(error.localizedDescription)")
+                    }
                 }
-            } else if let error = error {
-                print("Error requesting access: \(error.localizedDescription)")
+            } else {
+                print("Calendar access not granted.")
             }
         }
-    }
-}
-
-#Preview {
-    let context = PersistenceController.preview.container.viewContext
-    let sampleSubscription = Subscription(context: context)
-    sampleSubscription.id = UUID()
-    sampleSubscription.serviceName = "Sample Service"
-    sampleSubscription.cost = 9.99
-    sampleSubscription.billingCycle = "Monthly"
-    sampleSubscription.nextBillingDate = Date()
-    sampleSubscription.reminder = true
-    sampleSubscription.notes = "Sample notes for the subscription."
-    
-    return NavigationStack {
-        SubscriptionDetailView(subscription: sampleSubscription)
     }
 }
