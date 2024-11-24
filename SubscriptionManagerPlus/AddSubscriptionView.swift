@@ -1,214 +1,155 @@
-//
-//  AddSubscriptionView.swift
-//  SubscriptionManagerPlus
-//
-//  Created by Mubarak Almahmeed on 18/11/2024.
-//
-
 import SwiftUI
-import UserNotifications
 
 struct AddSubscriptionView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) private var presentationMode
 
-    var editingSubscription: Subscription? // Optional for editing mode
+    @State var serviceName: String = ""
+    @State var cost: String = ""
+    @State var nextBillingDate: Date = Date()
+    @State var notes: String = ""
+    @State var isEditing: Bool = false // Indicates if we're editing an existing subscription
 
-    @State private var serviceName = ""
-    @State private var selectedCompany: Company? // New state for selected company
-    @State private var cost = ""
-    @State private var billingCycle = "Monthly"
-    @State private var nextBillingDate = Date()
-    @State private var reminder = false
-    @State private var notes = ""
+    // Subscription being edited (if any)
+    var subscriptionToEdit: Subscription?
 
     @State private var showAlert = false
     @State private var alertMessage = ""
 
-    private let billingCycles = ["Monthly", "Yearly"]
-
     var body: some View {
-        NavigationStack {
-            ZStack {
-                // Gradient background
-                LinearGradient(
-                    gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.green.opacity(0.8)]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .edgesIgnoringSafeArea(.all)
+        NavigationView {
+            VStack {
+                Form {
+                    // Service Details Section
+                    Section(header: Text("Service Details").foregroundColor(Color("AppPrimaryText"))) {
+                        TextField("Service Name", text: $serviceName)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .foregroundColor(Color("AppPrimaryText"))
+                            .accessibilityLabel("Service Name")
+                            .accessibilityHint("Enter the name of the subscription service")
 
-                VStack {
-                    // Animated header
-                    Text(editingSubscription == nil ? "Add Subscription" : "Edit Subscription")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.top, 20)
-                        .transition(.opacity)
-                        .animation(.easeInOut, value: editingSubscription)
-
-                    // Main form
-                    Form {
-                        // Subscription details
-                        Section(header: Text("Subscription Details")) {
-                            NavigationLink(destination: CompanyListView(onCompanySelected: { company in
-                                selectedCompany = company
-                                serviceName = company.name // Automatically set the service name
-                            })) {
-                                HStack {
-                                    Text("Select Company")
-                                        .foregroundColor(.blue)
-                                    Spacer()
-                                    if let company = selectedCompany {
-                                        Text(company.name)
-                                            .foregroundColor(.gray)
-                                    }
-                                }
+                        TextField("Cost", text: $cost)
+                            .keyboardType(.decimalPad)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .foregroundColor(Color("AppPrimaryText"))
+                            .accessibilityLabel("Cost")
+                            .accessibilityHint("Enter the cost in dollars, e.g., 9.99")
+                            .onChange(of: cost) { oldValue, newValue in
+                                cost = newValue.filter { "0123456789.".contains($0) }
                             }
 
-                            TextField("Service Name", text: $serviceName)
-                                .autocapitalization(.words)
-                                .disableAutocorrection(true)
-                                .padding()
-                                .background(Color.white.opacity(0.8))
-                                .cornerRadius(8)
-                                .shadow(radius: 4)
 
-                            TextField("Cost", text: $cost)
-                                .keyboardType(.decimalPad)
-                                .padding()
-                                .background(Color.white.opacity(0.8))
-                                .cornerRadius(8)
-                                .shadow(radius: 4)
-
-                            Picker("Billing Cycle", selection: $billingCycle) {
-                                ForEach(billingCycles, id: \.self) { cycle in
-                                    Text(cycle)
-                                }
-                            }
-                            .pickerStyle(SegmentedPickerStyle())
-                        }
-
-                        // Notification options
-                        Section(header: Text("Notification Reminder")) {
-                            Toggle("Enable Reminder", isOn: $reminder)
-                                .padding()
-                                .background(Color.white.opacity(0.8))
-                                .cornerRadius(8)
-                                .shadow(radius: 4)
-
-                            TextEditor(text: $notes)
-                                .frame(height: 100)
-                                .padding()
-                                .background(Color.white.opacity(0.8))
-                                .cornerRadius(8)
-                                .shadow(radius: 4)
-                        }
+                        DatePicker("Next Billing Date", selection: $nextBillingDate, in: Date()..., displayedComponents: .date)
+                            .foregroundColor(Color("AppPrimaryText"))
+                            .accessibilityLabel("Next Billing Date")
+                            .accessibilityHint("Select the next billing date")
                     }
-                    .scrollContentBackground(.hidden) // Removes default form background
-                    .background(Color.clear)
-                    .padding()
+
+                    // Additional Notes Section
+                    Section(header: Text("Additional Notes").foregroundColor(Color("AppPrimaryText"))) {
+                        TextEditor(text: $notes)
+                            .frame(height: 100)
+                            .cornerRadius(8)
+                            .foregroundColor(Color("AppPrimaryText"))
+                            .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color("AppSecondaryText"), lineWidth: 1))
+                            .accessibilityLabel("Additional Notes")
+                            .accessibilityHint("Enter any additional information about the subscription")
+                    }
                 }
+                .background(Color("AppPrimaryBackground"))
+                .scrollContentBackground(.hidden)
+
+                Spacer()
+
+                // Save Button
+                Button(action: {
+                    validateAndSave()
+                }) {
+                    Text("Save")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color("PrimaryButtonBackground"))
+                        .foregroundColor(Color("PrimaryButtonText"))
+                        .cornerRadius(10)
+                        .shadow(color: Color("AppSecondaryBackground").opacity(0.5), radius: 5, x: 0, y: 2)
+                }
+                .accessibilityLabel("Save Subscription")
+                .accessibilityHint("Saves the subscription details")
+                .disabled(serviceName.isEmpty || cost.isEmpty)
                 .padding()
             }
+            .navigationTitle(isEditing ? "Edit Subscription" : "Add Subscription")
             .toolbar {
-                // Cancel Button
-                ToolbarItem(placement: .cancellationAction) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
-                        dismiss()
+                        presentationMode.wrappedValue.dismiss()
                     }
-                }
-                // Save Button
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
-                        saveSubscription()
-                    }
+                    .accessibilityLabel("Cancel")
+                    .accessibilityHint("Dismisses the form without saving")
                 }
             }
             .alert(isPresented: $showAlert) {
-                Alert(title: Text("Invalid Input"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Validation Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
             .onAppear {
-                if let subscription = editingSubscription {
-                    // Pre-fill fields if editing
+                // Pre-fill fields if editing an existing subscription
+                if let subscription = subscriptionToEdit {
                     serviceName = subscription.serviceName ?? ""
                     cost = String(subscription.cost)
-                    billingCycle = subscription.billingCycle ?? "Monthly"
                     nextBillingDate = subscription.nextBillingDate ?? Date()
-                    reminder = subscription.reminder
                     notes = subscription.notes ?? ""
+                    isEditing = true
                 }
             }
         }
     }
 
-    private func saveSubscription() {
-        guard !serviceName.isEmpty else {
-            showAlert(message: "Service name cannot be empty.")
-            return
-        }
-
+    private func validateAndSave() {
+        // Ensure cost and nextBillingDate are valid
         guard let costValue = Double(cost), costValue > 0 else {
-            showAlert(message: "Please enter a valid cost greater than 0.")
+            alertMessage = "Please enter a valid cost greater than 0."
+            showAlert = true
             return
         }
 
-        let subscription = editingSubscription ?? Subscription(context: viewContext)
-        subscription.id = subscription.id ?? UUID() // Retain the same ID for edits
-        subscription.serviceName = serviceName
-        subscription.cost = costValue
-        subscription.billingCycle = billingCycle
-        subscription.nextBillingDate = nextBillingDate
-        subscription.reminder = reminder
-        subscription.notes = notes
+        if nextBillingDate < Date() {
+            alertMessage = "Next billing date cannot be in the past."
+            showAlert = true
+            return
+        }
 
-        // Schedule a notification if reminder is enabled
-        if reminder {
-            scheduleNotification(for: subscription)
+        saveSubscription()
+    }
+
+    private func saveSubscription() {
+        if let subscription = subscriptionToEdit {
+            // Update existing subscription
+            subscription.serviceName = serviceName
+            subscription.cost = Double(cost) ?? 0.0
+            subscription.nextBillingDate = nextBillingDate
+            subscription.notes = notes
+        } else {
+            // Create a new subscription
+            let newSubscription = Subscription(context: viewContext)
+            newSubscription.id = UUID()
+            newSubscription.serviceName = serviceName
+            newSubscription.cost = Double(cost) ?? 0.0
+            newSubscription.nextBillingDate = nextBillingDate
+            newSubscription.notes = notes
         }
 
         do {
             try viewContext.save()
-            dismiss()
+            presentationMode.wrappedValue.dismiss()
         } catch {
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            print("Error saving subscription: \(error.localizedDescription)")
         }
     }
+}
 
-    private func showAlert(message: String) {
-        alertMessage = message
-        showAlert = true
-    }
-
-    private func scheduleNotification(for subscription: Subscription) {
-        let center = UNUserNotificationCenter.current()
-        let content = UNMutableNotificationContent()
-        content.title = "Upcoming Billing Reminder"
-
-        // Create a date formatter
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-
-        // Format the billing date
-        let formattedDate = subscription.nextBillingDate.map { formatter.string(from: $0) } ?? "Unknown date"
-        content.body = "\(subscription.serviceName ?? "Subscription") is due on \(formattedDate)."
-        content.sound = .default
-
-        guard let billingDate = subscription.nextBillingDate else { return }
-        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: billingDate)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-
-        let request = UNNotificationRequest(identifier: subscription.id?.uuidString ?? UUID().uuidString, content: content, trigger: trigger)
-
-        center.add(request) { error in
-            if let error = error {
-                print("Error scheduling notification: \(error.localizedDescription)")
-            } else {
-                print("Notification scheduled for \(subscription.serviceName ?? "Subscription").")
-            }
-        }
+struct AddSubscriptionView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddSubscriptionView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
